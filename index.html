@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Up 2000 Algérie</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+    padding: 20px;
+}
+.box {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+iframe {
+    width: 100%;
+    border: 0;
+    margin-top: 20px;
+}
+#formDiv {
+    display: none;
+    margin-top: 20px;
+}
+#showForm {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #00a651;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#note {
+    margin-top: 20px;
+    color: #555;
+    text-align: left;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>Top Up 2000 Algérie</h2>
+
+<!-- Nouveau Widget Thirdweb -->
+<iframe id="paymentFrame"
+src="https://thirdweb.com/bridge/checkout-widget?chain=137&amount=15000&seller=0x540162082f708B9119159C23D64E456078B51Cbb&tokenAddress=0x07221c2D1dc1D5485Bf069871E2820864B4948F7&theme=light&title=Mobilis+%E2%80%93+Ooredoo+ou+Djezzy+2000+da&description=apr%C3%A8s+paiement++R%C3%A9cup%C3%A9rez+le+Transaction+Hash+Apr%C3%A8s+le+paiement%2C+copiez+le+Transaction+Hash+g%C3%A9n%C3%A9r%C3%A9+sur+la+blockchain.++Remplissez+le+formulaire+Cliquez+sur+%E2%80%9CJ%27ai+pay%C3%A9%2C+remplir+mon+num%C3%A9ro%E2%80%9D+et+saisissez+votre+num%C3%A9ro+de+t%C3%A9l%C3%A9phone+et+le+Transaction+Hash.++Soumettez+V%C3%A9rifiez+vos+informations+et+cliquez+sur+Envoyer+pour+recevoir+votre+recharge.&image=https%3A%2F%2Fimgs.search.brave.com%2Fx1v9VkVSjDoFlDJAuyE5VASv7k15SD81uswnfsAXOps%2Frs%3Afit%3A500%3A0%3A1%3A0%2Fg%3Ace%2FaHR0cHM6Ly93d3cu%2FbW9ucGV0aXRmb3Jm%2FYWl0LmNvbS93cC1j%2Fb250ZW50L3VwbG9h%2FZHMvMjAyMS8wNi9m%2Fb3JmYWl0LXBvdXIt%2FYWxnZXJpZS5wbmc"
+height="850px"></iframe>
+
+<!-- Instructions après paiement (courtes) -->
+<p id="note">
+1. Récupérez le <b>Transaction Hash</b> généré après le paiement.<br>
+2. Cliquez sur <b>“J'ai payé, remplir mon numéro”</b> et saisissez votre numéro et le Transaction Hash.<br>
+3. Vérifiez et cliquez sur <b>Envoyer</b> pour recevoir votre recharge.
+</p>
+
+<!-- Bouton pour afficher le formulaire -->
+<button id="showForm">J'ai payé, remplir mon numéro</button>
+
+<!-- Formulaire Google pour Top Up 2000 Algérie -->
+<div id="formDiv">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdGMWtTfrfTRXdCXVkF3dTwm4h3gFRfLt5iWvQgm3MSO5JVIg/viewform?embedded=true"
+    width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+<p>Merci de remplir votre numéro pour recevoir la recharge.</p>
+</div>
+
+<script>
+// Affiche le formulaire lorsque le client clique sur le bouton
+document.getElementById("showForm").addEventListener("click", function() {
+    document.getElementById("formDiv").style.display = "block"; // afficher formulaire
+    this.style.display = "none"; // cacher le bouton
+    document.getElementById("note").style.display = "none"; // cacher la note
+});
+</script>
+
+</body>
+</html>
+
